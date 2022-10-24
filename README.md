@@ -29,7 +29,8 @@ Running the model
 
 Prediction model
 The model was built on python version 3 and above.Libraries for catboost,pickle and sklearn have to be installed.
-The input file should be in the format provided in the example_data.txt as tab seperated file. The input file path and the path of the folder for the output file to be written can be provided as arguments.
+The input file should be in the format provided in the dataset.tsv
+as tab seperated file. The input file path and the path of the folder for the output file to be written can be provided as arguments.
 The outputs will be written in the folder mentioned.
 
 Ensemble model
@@ -37,6 +38,6 @@ Ensemble model
 The ouputs of the prediction model are used as inputs for ensembling. The path to these files can be provided and the path for the ensemble output can also be provided.  
 
 STEPS
-1. Extract the features and create a tab seperated file for input as shown in the example_dat file
+1. Extract the features and create a tab seperated file for input as shown in the dataset.tsv file
 2. run "python moonlighting_catboost_predictiont.py path\inputfile path\outputfolder" in the terminal and provide the path for the input file and output folder as input to get the prediction score.
 3. run "python averaged_ensemble_prediction.py path\outputfile_of_individual_models path\outputfolder path\inputfile_of_initial_model" in the terminal and provide the path for the input file and output folder as input to get the maximum and averaged ensemble score.
