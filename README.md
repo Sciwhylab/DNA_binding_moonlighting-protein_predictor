@@ -1,4 +1,17 @@
 # DNA_Binding_moonlighting_predictor
+This predictor is trained to predict Moonlighting DNA binding proteins using the averaged ensemble of predictions from the 5 features sets generated as mentioned below. 
+
+This repository includes the following source codes:
+1. moonlighting_catboost_prediction.py ###to predict moonlighting proteins from all 5 feature sets compiled as provided in the dataset
+2. averaged_ensemble_prediction.py  ### to generate the predictions by ensembling the predictions from individual models.
+3. To generate predictions from individual features:
+      -Evolutionary_feature_model.py ### can be used to generate predictions from evolutionary features.
+      -Geneexpression_feature_model.py ### can be used to generate predictions from Gene expression features.
+      -PPInetwork_feature_model.py   ### can be used to generate predictions from Protein network features.
+      -Secondarystructure_feature_model.py  ### can be used to generate predictions from Secondary structure features.
+      -Sequence_feature_model.py   ### can be used to generate predictions from Sequence features.
+
+
 Feature generation
 
 Evolutionary Features
@@ -29,8 +42,7 @@ Running the model
 
 Prediction model
 The model was built on python version 3 and above.Libraries for catboost,pickle and sklearn have to be installed.
-The input file should be in the format provided in the dataset.tsv
-as tab seperated file. The input file path and the path of the folder for the output file to be written can be provided as arguments.
+The input file should be in the format provided in the dataset.tsv as tab seperated file. The input file path and the path of the folder for the output file to be written can be provided as arguments.
 The outputs will be written in the folder mentioned.
 
 Ensemble model
