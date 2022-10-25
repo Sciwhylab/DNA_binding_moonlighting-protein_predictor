@@ -2,14 +2,24 @@
 This predictor is trained to predict Moonlighting DNA binding proteins using the averaged ensemble of predictions from the 5 features sets generated as mentioned below. 
 
 This repository includes the following source codes:
-1. moonlighting_catboost_prediction.py ###to predict moonlighting proteins from all 5 feature sets compiled as provided in the dataset
-2. averaged_ensemble_prediction.py  ### to generate the predictions by ensembling the predictions from individual models.
+
+1. moonlighting_catboost_prediction.py 
+    To predict moonlighting proteins from all 5 feature sets compiled as provided in the dataset
+    
+2. averaged_ensemble_prediction.py  
+    To generate the predictions by ensembling the predictions from individual models.
+    
 3. To generate predictions from individual features:
-      -Evolutionary_feature_model.py ### can be used to generate predictions from evolutionary features.
-      -Geneexpression_feature_model.py ### can be used to generate predictions from Gene expression features.
-      -PPInetwork_feature_model.py   ### can be used to generate predictions from Protein network features.
-      -Secondarystructure_feature_model.py  ### can be used to generate predictions from Secondary structure features.
-      -Sequence_feature_model.py   ### can be used to generate predictions from Sequence features.
+      -Evolutionary_feature_model.py 
+        Can be used to generate predictions from evolutionary features.
+      -Geneexpression_feature_model.py 
+        can be used to generate predictions from Gene expression features.
+      -PPInetwork_feature_model.py   
+        Can be used to generate predictions from Protein network features.
+      -Secondarystructure_feature_model.py  
+        Can be used to generate predictions from Secondary structure features.
+      -Sequence_feature_model.py   
+        Can be used to generate predictions from Sequence features.
 
 
 Feature generation
@@ -30,12 +40,12 @@ For each gene using the High confidence direct physical protein protein Ineracti
 There will be 3 network features.
 
 Protein sequence and predicted binding site features
-Amino acid composition, length of the proteins, and the binding site prediction scores for carbohydrates, DNA,RNA, adenosine triphosphate(ATP) and proteins can be calculated using (http://gigeasa-bs.sciwhylab.org/)
+Amino acid composition, length of the proteins, and the binding site prediction scores for carbohydrates, DNA,RNA, adenosine triphosphate(ATP) and proteins can be calculated using (http://gigeasa-bs.sciwhylab.org/).The human sequence features used for the study is included in the folder GIGEASA_human_dataset.
 There will be 40 sequence features.
 
 Gene Expression Features
 For each gene the frequency of occurence of expression values can be binned into 5 equal probability bins.(http://www.sciwhylab.org/gigeasa/)
-There will be 10 gene expression features when using 5 equal probability bins.
+There will be 10 gene expression features when using 5 equal probability bins.The human gene expression features used for the study is included in the folder GIGEASA_human_dataset.
 
 
 Running the model
