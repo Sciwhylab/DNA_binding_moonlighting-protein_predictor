@@ -4,7 +4,7 @@ This predictor is trained to predict Moonlighting DNA binding proteins using the
 
 This repository includes the following source codes:
 
-1. moonlighting_catboost_prediction.py 
+1. moonlighting_catboost_prediction.py     
     To predict moonlighting proteins from all 5 feature sets compiled as provided in the dataset
     
 2. averaged_ensemble_prediction.py  
@@ -12,11 +12,11 @@ This repository includes the following source codes:
     
 3. To generate predictions from individual features:
       
-      - Evolutionary_feature_model.py 
+      - Evolutionary_feature_model.py    
         Can be used to generate predictions from evolutionary features.
       
-      - Geneexpression_feature_model.py 
-        can be used to generate predictions from Gene expression features.
+      - Geneexpression_feature_model.py     
+        Can be used to generate predictions from Gene expression features.
       
       - PPInetwork_feature_model.py   
         Can be used to generate predictions from Protein network features.
@@ -33,7 +33,7 @@ This repository includes the following source codes:
 ### Evolutionary Features
 
 Position specific scoring matrix (PSSM) can be generated using PSI-BLAST in the locally installed BLAST with default parameters and 3 iterations against the nr database available in NCBI.
-To generate the evolutionary features the average  of the log odds score values for all amino acids(20 features) and the average of the log odds score for each of the 20 amino acids were taken(20*20 features). 
+To generate the evolutionary features the average  of the log odds score values for all amino acids(20 features) and the average of the log odds score for each of the 20 amino acids were taken(20*20 features).
 There will be 420 evolutionary features.
 
 ### Predicted Structural Features
